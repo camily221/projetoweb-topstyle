@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Solidariedade">
+            <div>
+                <h1>Painel do Administrador</h1>
+                <p>Gerencie os doadores</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="doacao.html">Doação</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="cadastro-doador">
+            <h2>Cadastrar Novo Doador</h2>
+            <form>
+                <div>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome do Doador" required>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail do Doador" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="Telefone do Doador" required>
+                </div>
+                <div>
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Número do WhatsApp" required>
+                </div>
+                <button type="submit">Cadastrar Doador</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <img src="https://cdn-icons-png.flaticon.com/512/880/880594.png" alt="Coração solidário">
+        <p>Gerencie os doadores de maneira eficiente!</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Doação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Solidariedade">
+            <div>
+                <h1>Cadastro de Doação</h1>
+                <p>Cadastre-se para se tornar um doador de roupas e ajude quem precisa!</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="doacao.html">Doação</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="cadastro-doacao">
+            <h2>Cadastro para se Tornar um Doador</h2>
+
+            <!-- Formulário de Cadastro -->
+            <form action="processa_doacao.html" method="POST" onsubmit="mostrarAgradecimento(event)">
+                <!-- Dados do Doador -->
+                <div>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <div>
+                    <label for="whatsapp">WhatsApp</label>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Número do WhatsApp" required>
+                </div>
+
+                <!-- Características da Peça -->
+                <div>
+                    <label for="tipo-roupas">Tipo de Roupas</label>
+                    <input type="text" id="tipo-roupas" name="tipo-roupas" placeholder="Ex: roupas masculinas, femininas, infantis" required>
+                </div>
+                <div>
+                    <label for="estado-roupas">Estado da Roupa</label>
+                    <select id="estado-roupas" name="estado-roupas" required>
+                        <option value="novo">Novo</option>
+                        <option value="usado">Usado</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="quantidade">Quantidade de Itens</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade de itens doados" required>
+                </div>
+                
+                <button type="submit">Cadastrar como Doador</button>
+            </form>
+        </section>
+
+        <!-- Tela de Agradecimento (Oculta inicialmente) -->
+        <section id="agradecimento" style="display: none;">
+            <h2>Obrigado por se Tornar um Doador!</h2>
+            <p>Sua doação será muito bem-vinda! Agradecemos pela sua contribuição.</p>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>Obrigado pela sua contribuição!</p>
+    </footer>
+
+    <script>
+        // Função para mostrar a tela de agradecimento após o envio do formulário
+        function mostrarAgradecimento(event) {
+            event.preventDefault();  // Impede o envio padrão do formulário
+            document.querySelector('.cadastro-doacao').style.display = 'none';  // Esconde o formulário
+            document.querySelector('#agradecimento').style.display = 'block';  // Mostra a tela de agradecimento
+        }
+    </script>
+</body>
+</html>

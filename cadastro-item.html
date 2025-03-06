@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Cadastrar Item - Plataforma de Doação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Solidariedade">
+            <div>
+        <h1>Cadastrar Item</h1>
+           </div>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="doacao.html">Doação</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <form id="formItem">
+            <div>
+            <label>Nome da peça:</label>
+            <input type="text" id="nomeItem" required>
+            </div>
+            <div>
+            <label>Categoria:</label>
+            <select id="categoriaItem">
+                <option value="camiseta">Camiseta</option>
+                <option value="calca">Calça</option>
+                <option value="vestido">Vestido</option>
+            </select>
+            </div>
+            <div>
+            <label>Tamanho:</label>
+            <input type="text" id="tamanhoItem" required>
+            </div>
+            <div>
+            <label>Condição:</label>
+            <select id="condicaoItem">
+                <option value="novo">Novo</option>
+                <option value="seminovo">Seminovo</option>
+                <option value="usado">Usado</option>
+            </select>
+            </div>
+            <div>
+            <label>Descrição:</label>
+            <textarea id="descricaoItem"></textarea>
+            </div>
+
+            <button type="button" onclick="cadastrarItem()">Cadastrar Item</button>
+        </form>
+    </main>
+
+   
+</body>
+</html>
